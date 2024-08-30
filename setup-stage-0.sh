@@ -1,4 +1,10 @@
 #!/bin/bash
+echo "`date -Is` - Atualizando o sistema."
+apt update -y
+apt upgrade -y
+
+echo "`date -Is` - Instalando o bsdmainutils."
+apt install -y bsdmainutils
 
 echo "`date -Is` - Inicializando o Cassandra."
 cassandra -R
